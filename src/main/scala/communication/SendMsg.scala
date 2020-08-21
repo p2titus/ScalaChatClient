@@ -1,9 +1,10 @@
 package communication
 
-import common.Containers
+import common._
 
 // java imports
 import java.net._
+import java.io._
 
 trait Sender {
   def sendMsg(msg: Message): Unit
