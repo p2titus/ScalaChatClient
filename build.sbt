@@ -1,14 +1,14 @@
-import Dependencies._
+organization := "com.titus"
 
-ThisBuild / scalaVersion     := "2.13.3"
-ThisBuild / version          := "PRE-ALPHA"
-ThisBuild / organization     := "com.p2titus"
-ThisBuild / organizationName := "p2titus"
+name := "scala-chat"
 
-lazy val root = (project in file("."))
-  .settings(
-    name := "ScalaChatClient",
-    libraryDependencies += scalaTest % Test
-  )
+version := "0.1.0-SNAPSHOT"
 
-// See https://www.scala-sbt.org/1.x/docs/Using-Sonatype.html for instructions on how to publish to Sonatype.
+scalaVersion := "2.13.3"
+
+libraryDependencies ++= Seq(
+  // https://mvnrepository.com/artifact/org.scalatest/scalatest
+  "org.scalatest" %% "scalatest" % "3.2.2" % Test,
+
+
+)
