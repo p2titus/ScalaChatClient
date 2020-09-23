@@ -27,6 +27,8 @@ object SendMsg extends Sender {
     val out: ObjectOutputStream = new ObjectOutputStream(outStream)
     
     out.writeObject(msg)
+
+    println("sent!")
     
     out.close
     outStream.close
@@ -35,7 +37,8 @@ object SendMsg extends Sender {
 }
 
 // used when sending a number of messages to a specific recipient
-// fixes metadata using the data supplied then ignores 
+// fixes metadata using the data supplied then ignores message metadata
+// TODO - is this actually useful
 class FixUsrMsg(private val meta: Metadata) extends Sender {
   override def sendMsg(msg: Message): Unit = ??? 
 }
