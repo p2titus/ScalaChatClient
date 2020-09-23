@@ -16,9 +16,10 @@ CREATE TABLE participants
 	chat_id SERIAL NOT NULL,
 	user_id SERIAL NOT NULL,
 	PRIMARY KEY (chat_id, user_id),
-	CONSTRAINT fk_part
+	CONSTRAINT fk_part_user
 		FOREIGN KEY(chat_id)
-			REFERENCES users(user_id)
+			REFERENCES users(user_id),
+	CONSTRAINT fk_part_chat
 		FOREIGN KEY(user_id)
 			REFERENCES chat(chat_id)
 );
