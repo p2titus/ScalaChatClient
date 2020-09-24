@@ -1,3 +1,8 @@
+# WARNING: using this script will get rid of all messages and contacts. Use at your OWN RISK
+
+# drops to ensure db is created successfully
+DROP DATABASE scalachat;
+CREATE DATABASE scalachat;
 
 CREATE TABLE users
 (

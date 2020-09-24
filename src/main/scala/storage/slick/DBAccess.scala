@@ -8,6 +8,7 @@ import scala.util.{Failure, Success}
 object DBAccess {
   private val config: String = "standard"
   private val dbCon: Database = Database.forConfig(config)
+  private val driver: String = "org.postgresql.Driver"
 
   def init(uri: String, outputFolder: String): Unit = {
     slick.codegen.SourceCodeGenerator.main(
@@ -15,8 +16,11 @@ object DBAccess {
     )
   }
 
+  def createDB: Unit = {
+
+  }
+
   def shutdown: Unit =
     dbCon.close
   
-  def accessSQL[A](query: String): A = ???
 }
