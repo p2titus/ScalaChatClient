@@ -38,3 +38,4 @@ object DBCommon {
   }
   val message: TableQuery[Message] = TableQuery[Message]
 }
+
